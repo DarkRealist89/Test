@@ -35,12 +35,15 @@ left join roles r on
 --	left join соединение данных из двух таблиц
 --	limit ограничение количества выданных строк
 --	distinct Уникальные
---	having условие соответствия после grop by
+--	having условие соответствия после group by
 --	псевдоним 'as' присвоение имени 
+
+
+--insert 
+
 
 --update 
 
---insert 
 
 --delete
 https://postgrespro.ru/docs/postgrespro/13/functions-aggregate
