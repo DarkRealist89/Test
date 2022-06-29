@@ -46,6 +46,32 @@ left join roles r on
 
 
 --delete
+
+
+insert into roles (name, team_id) values ('Артем', 1);
+insert into users (name, email, hash, salt, date_create, role_id, team_id) values ('Аретм', 'dark@mail.ru','233' ,'3434' ,'2022-06-29', (select "_id" from roles where "name"= 'Артем' limit 1), 1 );
+
+insert into users (name, email, hash, salt, date_create, role_id, team_id) values ('Аретм', 'dark@mail.ru','233' ,'3434' ,(select "date_create" from users where "name" = 'system') ,( select "role_id" from users where "name"= 'system') , 1 );
+
+update users set name='Вася' where name='Арyyтм';
+update users set hash ='333', salt ='ttt' where name='Аретм';
+delete from users where "hash" in ('333');
+
+select
+	u.name,
+	t.name as teams_name,
+	r.name as role_name
+from 
+	users u  
+	left join roles r  on 
+	u.role_id = r."_id"
+	left join teams t on
+	r.team_id = t."_id" ;
+	
+	
+	
+	
+	
 https://postgrespro.ru/docs/postgrespro/13/functions-aggregate
 https://postgrespro.ru/docs/postgrespro/13/functions-comparison
 https://postgrespro.ru/docs/postgrespro/13/sql-select#SQL-GROUPBY
