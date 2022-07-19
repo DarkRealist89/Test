@@ -75,3 +75,122 @@ from
 https://postgrespro.ru/docs/postgrespro/13/functions-aggregate
 https://postgrespro.ru/docs/postgrespro/13/functions-comparison
 https://postgrespro.ru/docs/postgrespro/13/sql-select#SQL-GROUPBY
+
+
+        // const alias = "al";
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     .select([`${alias}.${MdlpBatchFields.gtin}`, `${alias}.${MdlpBatchFields.gnvlp}`])
+        //     .distinct(true)
+        //     .orderBy(`${alias}.${MdlpBatchFields.gtin}`)
+        //     .getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "al";
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     // .select([`${alias}.${MdlpBatchFields.gtin}`, `${alias}.${MdlpBatchFields.gnvlp}`])
+        //     .andWhere(`${alias}.${MdlpBatchFields.count_sgtin} <= 10000`)
+        //     .orWhere(`${alias}.${MdlpBatchFields.count_sgtin} >= 20000`)
+        //     .orderBy(`${alias}.${MdlpBatchFields.count_sgtin}`)
+        //     .getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "al";
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     .andWhere(`${alias}.${MdlpBatchFields.gnvlp} != true`)
+        //     .getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "al";
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     .select(`${alias}.${MdlpBatchFields.batch}`)
+        //     .distinct(true)
+        //     .orderBy(`${alias}.${MdlpBatchFields.batch}`)
+
+        //     .getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "al";
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     .select(`${alias}.${MdlpBatchFields.gtin}`, MdlpBatchFields.gtin)
+        //     .addSelect(`${alias}.${MdlpBatchFields.gnvlp}`, MdlpBatchFields.gnvlp)
+        //     .addSelect(`count(*)`, "test")
+        //     .groupBy(`${alias}.${MdlpBatchFields.gtin}`)
+        //     .addGroupBy(`${alias}.${MdlpBatchFields.gnvlp}`)
+        //     .having(`count(*) > :cnt`, { cnt: 20 })
+        //     .orderBy("test")
+        //     .getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "u";
+        // const buider = this.connection
+        //     .createQueryBuilder(User, alias)
+        //     .leftJoin(`${alias}.${UserFields.role}`, "r")
+        //     .leftJoin(`r.${RoleFields.team}`, "t")
+        //     .select(`${alias}.${UserFields.name}`, "name")
+        //     .addSelect(`r.${RoleFields.name}`, "role_name")
+        //     .addSelect(`t.${TeamFields.name}`, "teams_name");
+        // // console.log(buider.clone().getQueryAndParameters());
+        // const tempItems = await buider.getRawMany();
+        // console.log(tempItems);
+
+        // const alias = "r";
+        // const foundRole = await this.connection
+        //     .createQueryBuilder(Role, alias)
+        //     .select(`r.${RoleFields.name}`)
+        //     .where({ name: "Вася" })
+        //     .getOne();
+
+        // if (!foundRole) {
+        //     const tempItems1 = await this.connection
+        //         .createQueryBuilder(Role, alias)
+        //         .insert()
+        //         .values({ name: "Вася", team })
+        //         .execute();
+        //     console.log(tempItems1);
+        // }
+
+        // const tempItems = await this.connection
+        //     .createQueryBuilder(Role, alias)
+        //     .update()
+        //     .set({ name: "Вася" })
+        //     .where({ name: "aard" })
+        //     .execute();
+        // console.log(tempItems);
+
+        // const tempItems2 = await this.connection
+        //     .createQueryBuilder(Role, alias)
+        //     .delete()
+        //     .where({ name: "fdfd" })
+        //     .execute();
+
+        // const tempItems12 = await this.connection
+        //     .createQueryBuilder(User, alias)
+        //     .insert()
+        //     .values({
+        //         name: "aard",
+        //         email: "d@D",
+        //         hash: "3333",
+        //         salt: "11112",
+        //         date_create: "2022-06-29",
+        //         role: "7943e250-017c-4992-a697-f019f46036af" as any,
+        //         team,
+        //     })
+        //     .execute();
+        // console.log(tempItems1);
+
+        // const tempItems1 = await this.connection
+        //     .createQueryBuilder(MdlpBatch, alias)
+        //     .select(`${alias}.${MdlpBatchFields.gtin}`, MdlpBatchFields.gtin)
+        //     .addSelect(`${alias}.${MdlpBatchFields.gnvlp}`, MdlpBatchFields.gnvlp)
+        //     .distinct(true)
+        //     .orderBy(`${alias}.${MdlpBatchFields.gtin}`)
+        //     .getRawMany<{
+        //         [MdlpBatchFields.gtin]: string;
+        //         [MdlpBatchFields.gnvlp]: boolean;
+        //     }>();
+        // console.log(tempItems1);
